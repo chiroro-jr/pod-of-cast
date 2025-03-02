@@ -1,10 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
 @theme {
-  --font-monserrat: "Montserrat Alternates", sans-serif;
+    --font-monserrat: 'Montserrat Alternates', sans-serif;
 }
 
 body {
-  font-family: var(--font-monserrat);
+    font-family: var(--font-monserrat);
 }
