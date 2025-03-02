@@ -1,5 +1,44 @@
 @import 'tailwindcss';
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes:
+        light --default,
+        dark --default;
+}
+
+@plugin "daisyui/theme" {
+    name: 'demonspace';
+    default: true;
+    prefersdark: false;
+    color-scheme: 'light';
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(96.08% 0.0084 236.56);
+    --color-base-300: oklch(95.26% 0.0128 48.59);
+    --color-base-content: oklch(0% 0 0);
+    --color-primary: oklch(58.02% 0.1747 31.51);
+    --color-primary-content: oklch(100% 0 0);
+    --color-secondary: oklch(0% 0 0);
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: oklch(72.56% 0.0614 235.67);
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(42.02% 0 0);
+    --color-neutral-content: oklch(100% 0 0);
+    --color-info: oklch(71% 0.143 215.221);
+    --color-info-content: oklch(98% 0.019 200.873);
+    --color-success: oklch(72% 0.219 149.579);
+    --color-success-content: oklch(98% 0.018 155.826);
+    --color-warning: oklch(70% 0.213 47.604);
+    --color-warning-content: oklch(98% 0.016 73.684);
+    --color-error: oklch(64% 0.246 16.439);
+    --color-error-content: oklch(96% 0.015 12.422);
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
 
 @theme {
     --font-monserrat: 'Montserrat Alternates', sans-serif;
