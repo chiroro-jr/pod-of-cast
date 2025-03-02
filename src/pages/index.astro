@@ -1,7 +1,75 @@
 ---
+import { Icon } from 'astro-icon/components';
 import BaseLayout from '@/layouts/base-layout.astro';
 ---
 
 <BaseLayout>
-    <button class="btn btn-xl btn-primary">Hello Astro + Daisy UI</button>
+    <nav class="bg-base-300 lg:py-7 py-5">
+        <div class="container px-4 lg:p-0 mx-auto">
+            <ul class="flex items-center justify-between lg:justify-start gap-20">
+                <li>
+                    <a href="/">
+                        <Icon name="logo" size={70} />
+                    </a>
+                </li>
+                <li class="lg:hidden list-item" aria-label="menu-open">
+                    <Icon name="menu" size={35} />
+                </li>
+                <li class="gap-4 font-semibold hidden lg:flex">
+                    <a class="link link-secondary link-hover" href="/episodes">Episodes</a>
+                    <a class="link link-secondary link-hover" href="About">About</a>
+                    <a class="link link-secondary link-hover" href="More">More</a>
+                </li>
+                <li class="lg:ml-auto lg:flex lg:gap-4 hidden uppercase">
+                    <a href="/recent-episodes" class="btn btn-secondary btn-outline">Recent episodes</a>
+                    <a href="/subscribe" class="btn btn-secondary">Subscribe</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Nav -->
+            <div
+                class="mobile-nav lg:hidden flex justify-end fixed h-screen w-screen inset-0 translate-x-full bg-secondary/10 transition-all duration-200"
+            >
+                <ul class="flex flex-col gap-8 w-full md:w-3/4 h-full bg-primary p-8">
+                    <li>
+                        <button class="btn btn-square btn-outline p-1" aria-label="menu-close">
+                            <Icon name="close" size={35} />
+                        </button>
+                    </li>
+                    <li class="flex flex-col gap-6 font-semibold text-4xl mb-auto">
+                        <a class="link link-secondary link-hover" href="/episodes">Episodes</a>
+                        <a class="link link-secondary link-hover" href="About">About</a>
+                        <a class="link link-secondary link-hover" href="More">More</a>
+                    </li>
+                    <li class="flex-col flex gap-4 uppercase">
+                        <a href="/recent-episodes" class="btn btn-secondary btn-outline">Recent episodes</a>
+                        <a href="/subscribe" class="btn btn-secondary">Subscribe</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </BaseLayout>
+
+<script type="module">
+    const menuOpenBtn = document.querySelector('li[aria-label="menu-open"]');
+    const menuCloseBtn = document.querySelector('button[aria-label="menu-close"]');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    menuOpenBtn.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-0');
+        mobileNav.classList.remove('translate-x-full');
+    });
+
+    menuCloseBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('translate-x-0');
+        mobileNav.classList.add('translate-x-full');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+            mobileNav.classList.remove('translate-x-0');
+            mobileNav.classList.add('translate-x-full');
+        }
+    });
+</script>
