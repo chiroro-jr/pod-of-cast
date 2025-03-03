@@ -1,48 +1,95 @@
-# Astro Starter Kit: Basics
+# Pod of Cast 🎙️
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+A modern podcast website built with Astro, TailwindCSS, and DaisyUI. Features a clean, responsive design optimized for podcast content delivery and audience engagement.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Responsive design optimized for all devices
+- Modern UI with DaisyUI components
+- Fast performance with Astro
+- SEO optimized
+- Platform integration (Spotify, Google Podcasts, YouTube)
+- App store availability (iOS & Android)
+- Social media integration
+- Newsletter subscription
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🛠️ Tech Stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build/) - Web Framework
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [DaisyUI](https://daisyui.com/) - UI Components
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [ESLint](https://eslint.org/) - Code Linting
+- [PNPM](https://pnpm.io/) - Package Manager
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📦 Project Structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/          # Static assets
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── assets/      # Project assets (images, fonts)
+│   ├── components/  # Reusable UI components
+│   ├── layouts/     # Page layouts
+│   └── pages/       # Application pages
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚦 Getting Started
 
-## 🧞 Commands
+1. Clone the repository:
+```bash
+git clone https://github.com/chiroro-jr/pod-of-cast.git
+```
 
-All commands are run from the root of the project, from a terminal:
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+3. Start the development server:
+```bash
+pnpm dev
+```
 
-## 👀 Want to learn more?
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📝 Available Commands
+
+| Command           | Action                                       |
+|------------------|---------------------------------------------|
+| `pnpm install`   | Install dependencies                        |
+| `pnpm dev`       | Start development server at `localhost:4321`|
+| `pnpm build`     | Build for production to `./dist/`          |
+| `pnpm preview`   | Preview production build locally            |
+| `pnpm lint`      | Run ESLint                                 |
+| `pnpm lint:fix`  | Fix ESLint errors                          |
+
+## 🔧 Configuration
+
+- `astro.config.mjs` - Astro configuration
+- `tailwind.config.js` - TailwindCSS configuration
+- `tsconfig.json` - TypeScript configuration
+- `eslint.config.mjs` - ESLint configuration
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Nyasha D. Chiroro - [@chiroro-jr](https://github.com/chiroro-jr)
+
+## 🙏 Acknowledgments
+
+- [Astro](https://astro.build/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)

@@ -1,8 +1,16 @@
 ---
+import Container from "@/components/container.astro";
 import Header from "@/components/home/header.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
 ---
 
 <BaseLayout>
     <Header />
+    <main>
+        <section>
+            <!-- Implementing an infinite carousel -->
+            <!-- https://claude.ai/share/8ac76122-1fbf-4064-bb80-47a3b5bf3e4b -->
+            <Container></Container>
+        </section>
+    </main>
 </BaseLayout>
