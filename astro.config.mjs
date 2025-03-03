@@ -3,15 +3,20 @@ import icon from 'astro-icon';
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
-    integrations: [icon()],
-    vite: {
-        plugins: [tailwindcss()],
-        resolve: {
-            alias: {
-                '@': 'src',
-            },
-        },
-    },
+  integrations: [icon()],
+
+  vite: {
+      plugins: [tailwindcss()],
+      resolve: {
+          alias: {
+              '@': 'src',
+          },
+      },
+  },
+
+  adapter: netlify(),
 });
